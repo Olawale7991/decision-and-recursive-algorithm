@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Pricing</title>
+</head>
+<body>
+    <script>
+        function determineTicketPrice(age) {
+            if (age <= 12) {
+                return 10;
+            } else if (age >= 13 && age <= 17) {
+                return 15;
+            } else if (age >= 18) {
+                return 20;
+            } else {
+                return "Invalid age";
+            }
+        }
+
+        let age = prompt("Please enter your age:");
+        age = parseInt(age); 
+        let price = determineTicketPrice(age);
+
+        if (price !== "Invalid age") {
+            alert("The price of the movie ticket is $" + price);
+        } else {
+            alert(price);
+        }
+    </script>
+</body>
+</html>
